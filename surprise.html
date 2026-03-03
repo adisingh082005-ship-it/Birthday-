@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Special Surprise ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+/* Glowing Text */
+.title {
+    margin-top: 120px;
+    font-size: 38px;
+    font-weight: 700;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d; }
+    to   { text-shadow: 0 0 25px #ff1e57, 0 0 45px #ff1e57; }
+}
+
+/* Sparkles */
+.sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall 4s linear infinite;
+}
+
+@keyframes fall {
+    from { transform: translateY(-10vh); }
+    to { transform: translateY(110vh); }
+}
+
+/* Button */
+.btn {
+    margin-top: 60px;
+    padding: 12px 25px;
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="title">My Love Pari ❤️</h1>
+
+<button class="btn" onclick="location.href='letter.html'">Your Love Letter 💌</button>
+
+<script>
+function createSparkle() {
+    const sp = document.createElement('div');
+    sp.classList.add('sparkle');
+    sp.style.left = Math.random() * 100 + 'vw';
+    sp.style.animationDuration = (3 + Math.random() * 3) + 's';
+    document.body.appendChild(sp);
+
+    setTimeout(() => sp.remove(), 4000);
+}
+
+setInterval(createSparkle, 120);
+</script>
+
+</body>
+</html>
