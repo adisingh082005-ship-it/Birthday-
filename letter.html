@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Letter For My Pari ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Letter Box */
+.letter-box {
+    max-width: 90%;
+    background: white;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Title */
+h1 {
+    font-size: 32px;
+    margin-top: 25px;
+    font-weight: 700;
+    color: #ff3366;
+}
+
+/* Hearts animation */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    font-size: 22px;
+    animation: rise 6s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes rise {
+    from { transform: translateY(0); opacity: 0.8; }
+    to { transform: translateY(-120vh); opacity: 0; }
+}
+
+/* Button */
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ff3366;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Dear My Princess Pari ❤️</h1>
+
+<div class="letter-box">
+    <p>
+        I don’t know how to express it perfectly,  
+        but I just want you to know something today…
+    </p>
+
+    <p>
+        You are the sweetest, most beautiful part of my life.  
+        Every moment with you feels like a blessing,  
+        and every memory with you stays in my heart forever.
+    </p>
+
+    <p>
+        Your smile, your softness, your innocence —  
+        they make my whole world feel warm.  
+        I never knew someone could mean so much to me…  
+        until you came into my life.
+    </p>
+
+    <p>
+        Thank you for being you.  
+        Thank you for being my happiness.  
+        Thank you for letting me love you.
+    </p>
+
+    <p>
+        I love you more than words,  
+        more than distance,  
+        more than anything.  
+        Always yours…  
+        <br><br>
+        <strong>— Aditya ❤️</strong>
+    </p>
+</div>
+
+<!-- Back Button -->
+<button class="btn" onclick="location.href='index.html'">Back to Start 🌙</button>
+
+<script>
+setInterval(() => {
+    const h = document.createElement('div');
+    h.className = 'heart';
+    h.innerHTML = '❤️';
+    h.style.left = Math.random() * 100 + 'vw';
+    h.style.fontSize = (20 + Math.random()*20) + 'px';
+    document.body.appendChild(h);
+
+    setTimeout(() => h.remove(), 6000);
+}, 400);
+</script>
+
+</body>
+</html>
